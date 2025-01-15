@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Son's Portolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/Agent.ico"/>
+</head>
+<body>
+    
+    <!-- Launch Terminal -->
+    <div id="launch_terminal" class="launch_terminal">
+        Digital Portfolio
+        <br>
+        Copyright (C) Andrea Son 2025. All rights reserved.
+        <br>
+        <br>
+        C:\users\ason\ This website is best experienced on PC with audio on. Would you like to continue (y/n)?
+        <br>
+        <br>
+        C:\users\ason\ <input type="text" id="launch_input">
+        <br>
+        <p id="starting_windows_text">C:\users\ason\C:\users\ason\ Starting Windows 9X....</p>
+    </div>
+
+    <!-- Win9x Emulator -->
+    <div id="desktop">
+
+        <!-- Start Menu -->
+        <div id="start_menu">
+
+            <div id="start_menu_text_box">
+                <p id="start_menu_text"><b>Windows</b> 95</p>
+            </div>
+
+            <div class="start_button_container">
+                
+                <button class="start_resume_button" 
+                onclick="window.open('./assets/resume/Resume.pdf', '_blank')">
+                    <img class="start_app_img" src="./assets/app icons/resume.png" 
+                    alt="Resume"></img>
+                    Resume
+                </button>
+                
+                <button class="start_github_button" 
+                onclick="window.open('https://github.com/LethalMonk-cu', '_blank')">
+                    <img class="start_app_img" src="./assets/app icons/github.png" 
+                    alt="GitHub"></img>
+                    GitHub
+                </button>
+               
+                <button class="start_linkedin_button" 
+                onclick="window.open('https://www.linkedin.com/in/sonandrea', '_blank')">
+                    <img class="start_app_img" src="./assets/app icons/linkedin.png" 
+                    alt="LinkedIn"></img>
+                    LinkedIn
+                </button>           
+
+                <button id="start_website_button" onclick="toggleOpenFromStart()">
+                    <img class="start_app_img" src="./assets/system icons/internet explorer.png" 
+                    alt="Explorer"></img>
+                    Internet Explorer
+                </button>
+                
+            </div>
+        </div>
+
+        <!-- Screensaver Windows Logo -->
+        <img id="windows_logo" src="./assets/background.jpg"></img>
+        
+        <!-- Desktop Apps -->
+        <div id="desktop_apps">
+
+            <!-- Internet Explorer (Portfolio) -->
+            <div id="desktop_portfolio_app"> 
+                <img id="desktop_portfolio_app_img" src="./assets/system icons/internet explorer.png" 
+                alt="Internet Explorer"></img>
+                <p id="desktop_portfolio_app_text">Internet Explorer</p>
+            </div>
+
+        </div>
+
+        <!-- Porftolio Window -->
+        <div id="portfolio_window">
+
+            <!-- Header and Controls -->
+            <div id="window_header">
+                
+                <div id="window_title">
+                    <img id="internet_img_window" src="./assets/system icons/internet explorer.png" 
+                    alt="Internet"></img>
+                    <p id="window_header_text">Internet Explorer - Andrea Son's Portfolio</p>
+                </div>
+                
+                <div id="window_controls">
+
+                    <button id="minimize_button" onclick="toggleMinimize()"> 
+                        <img id="min_window_img" src="./assets/system icons/minimize window.png" 
+                        alt="Min"></img>
+                    </button>
+
+                    <button id="maximize_button" onclick="toggleMaximize()"> 
+                        <img id="max_window_img" src="./assets/system icons/maximize window.png" 
+                        alt="Max"></img>
+                    </button>
+
+                    <button id="close_button" onclick="closeWindow()"> 
+                        <img id="close_window_img" src="./assets/system icons/close window.png" 
+                        alt="Close"></img>
+                    </button>
+                </div>
+            
+            </div>
+
+            <!-- Browser Engine Header -->
+            <div id="engine_header">
+
+                <div id="engine_toolbar">
+                    <p class="engine_toolbar_text"><u>F</u>ile</p>
+                    <p class="engine_toolbar_text"><u>E</u>dit</p>
+                    <p class="engine_toolbar_text"><u>V</u>iew</p>
+                    <p class="engine_toolbar_text"><u>F</u>avorites</p>
+                    <p class="engine_toolbar_text"><u>H</u>elp</p>
+                </div> 
+
+                <div class="screen_divider"></div>
+
+                <div id="engine_address_bar">
+                    <p id="address">Address:</p>
+                    <div id="address_bar">
+                        https://LethalMonk-cu.github.io/Portfolio_Site
+                    </div>
+                </div>
+
+                <div class="screen_divider"></div>
+                
+            </div>
+
+            <!-- Content of Portfolio -->
+            <div id="window_content">
+
+                <!-- Porftolio Navigation -->
+                <nav id="desktop_nav">
+                    
+                    <div id="logo">Andrea Son</div>
+            
+                    <div id="nav_links">
+                        <a href="#about_me_container"><button type="button">About</button></a>
+                        <!--<a href="#experience_container"><button type="button">Experience</button></a>-->
+                        <!--<a href="#projects_container_divider"><button type="button">Projects</button></a>-->
+                        <a href="#contact_container"><button type="button">Contact</button></a>
+                    </div>
+            
+                </nav>
+            
+                <!-- Profile Display -->
+                <div id="profile_container" class="portfolio_section">
+            
+                    <div id="profile_section_text">
+            
+                        <p id="name">Andrea Son</p>
+                        
+                        <p id="title">Software Engineer</p>
+                        
+                        <p id="location">San Mateo, California</p>
+                        
+                        <!-- Links to External Resourecs -->
+                        <div id="profile_link_buttons">
+            
+                            <button class="resume_button" 
+                            onclick="window.open('./assets/resume/Resume.pdf', '_blank')">
+                                <img class="profile_link_img" src="./assets/app icons/resume.png" 
+                                alt="Resume">Resume</img>
+                            </button>
+                
+                            <button class="linkedin_button" 
+                            onclick="window.open('https://www.linkedin.com/in/sonandrea', '_blank')">
+                                <img class="profile_link_img" src="./assets/app icons/linkedin.png" 
+                                alt="My LinkedIn Profile">LinkedIn</img>
+                            </button>
+                
+                            <button class="github_button" 
+                            onclick="window.open('https://github.com/LethalMonk-cu', '_blank')">
+                                <img class="profile_link_img" src="./assets/app icons/github.png" 
+                                alt="My GitHub Profile" class="icon">GitHub</img>
+                            </button>
+                
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Picture -->
+                    <img id="profile_pic" src="./assets/profile pictures/profile_pic.png"
+                    alt="Profile picture"></img>
+            
+                </div>
+
+                <div class="screen_divider"></div>
+                
+                <!-- About Me Section -->
+                <div id="about_me_container" class="portfolio_section">
+
+                    <p class="section_header">About Me</p>
+                    
+                    <div id="about_me_introduction">
+                        <img id="about_me_pic" src="./assets/profile pictures/about_me_pic.png"></img>
+
+                        <div id="langauges_and_education">
+
+                            <div id="language_experience_text">
+                                <p>
+                                    <b><u>Language Experience</u></b><br>
+                                    Java  |  Python |  JavaScript  |  C++<br> 
+                                    Racket  |  ACL2  |  HTML  |  CSS
+                                </p>
+                            </div>
+
+                            <div id="education_text">
+                                <p>
+                                    <b><u>Northeastern University</u></b><br>
+                                    <i>Candidate for B.S.</i> in Computer Science<br>
+                                    <i>Concentration</i> in Artificial Intelligence<br>
+                                    <i>Minor in</i> Computer Engineering
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div id="about_me_text">
+                        <p>
+                            Aspiring software engineer interested in founding future AI start-ups. 
+                            I am eager to explore how AI can be utilized to enhance modern cybersecurity 
+                            standards and drive advancements in the biomedical industry. Currently, I am 
+                            a second year computer science student concentrating in AI at Northeastern 
+                            University. 
+                            <br>
+                            <br>
+                            My past experiences have equipped me with essential workplace skills, and I 
+                            am now looking to apply my tech interests in a hands-on industry role. I am 
+                            self-motivated, proactive, quick to learn, and experienced in leadership. I 
+                            thrive in collaborative environments and consistently aim for efficiency and 
+                            excellence.
+                        </p>
+                       
+                    </div>
+                    
+                </div>
+
+                <div class="screen_divider" id="projects_container_divider"></div>
+
+                <!--
+                Experience Section 
+                <div id="experience_container" class="portfolio_section">
+
+                    <p class="section_header">Experience</p>
+
+                    <div id="promaj_text">
+                        <p>experience text</p>
+                    </div>
+                </div>
+                
+                <div id="screen_divider"></div>
+                -->
+                
+                <!-- Projects Section 
+                <div id="projects_container" class="portfolio_section">
+                    
+                    <p class="section_header">Projects</p>
+
+                    <div id="project_portfolio">
+                        <p class ="project_header">Creating this Site</p>
+                        <p class ="project_languages">JavaScript | HTML | CSS</p>
+                        <p class ="project_text">
+                            
+                        </p>
+                    </div>
+
+                    <div id="project_promaj">
+                        <p class ="project_header">ProMaj9x, a Productivity Manager</p>
+                        <p class ="project_languages">Java</p>
+                        <p class ="project_text">Description</p>
+                    </div>
+                    
+                </div>
+
+                <div class="screen_divider"></div>
+                -->
+                <!-- Contact Section -->
+                <div id="contact_container" class="portfolio_section">
+
+                    <!-- Contact Me -->
+                    <p class="section_header">Contact Me</p>
+
+                    <!-- Contact Links Container -->
+                    <div id="contact_links">
+
+                        <!-- Linked Email Button -->
+                        <div class="contact_button" 
+                            onclick="window.open('mailto:son.and@northeastern.edu')">
+                                <img class="contact_img" src="./assets/app icons/email.png"></img>
+                                <p> son.and@northeastern.edu </p>
+                        </div>
+
+                        <!-- Linked LinkedIn Button -->
+                        <div class="contact_button" 
+                            onclick="window.open('https://www.linkedin.com/in/sonandrea', '_blank')">
+                                <img class="contact_img" src="./assets/app icons/linkedin.png"></img>
+                            LinkedIn
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+         
+        </div>
+
+        <!-- Windows Task Bar -->
+        <div id="task_bar">
+
+            <div id="menu_left">
+
+                <button id="start_button" onclick="toggleStartMenu()">
+                    <img id="start_button_img" src="./assets/system icons/start button.png" 
+                    alt="Start Button"></img>
+                </button>
+
+                <div id="rectangle_divider"></div>
+
+                <div id="rectangle_drag_and_drop"></div>
+                
+                <button id="website_button" onclick="toggleOpen()">
+                    <img id="internet_img" src="./assets/system icons/internet explorer.png" 
+                    alt="Internet"></img>
+                    <p id="internet_explorer_text">Andrea Son's Por...</p>
+                </button>
+
+            </div>
+            
+            <div id="menu_right">
+                
+                <button id="volume_button" onclick="toggleVolume()">
+                    <img id="volume_image" src="./assets/system icons/volume on.png" 
+                    alt="Volume On"></img>
+                </button>
+
+                <div id="current_time">
+                    <p id="hours">00</p>
+                    <p>:</p>
+                    <p id="minutes">00</p>
+                    <p id="time_of_day"> AM</p>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
