@@ -35,6 +35,15 @@ const currentTimeOfDay = document.getElementById('time_of_day');
 const startMenu = document.getElementById('start_menu');
 const startButton = document.getElementById('start_button');
 const desktopPortfolioApp = document.getElementById('desktop_portfolio_app');
+const menuRight = document.getElementById('menu_right');
+const maximizeButton = document.getElementById('maximize_button');
+const profileContainer = document.getElementById('profile_container');
+const aboutMeContainer = document.getElementById('about_me_container');
+const contactContainer = document.getElementById('contact_container');
+const contactLinks = document.getElementById('contact_links');
+const aboutMePic = document.getElementById('about_me_pic');
+const aboutMeIntroduction = document.getElementById('about_me_introduction');
+const profilePic = document.getElementById('profile_pic');
 
 // Window Manipulation Variables
 let isMouseDownMove = false;
@@ -63,10 +72,44 @@ var maximizeWindow = new Audio('./assets/sound effects/Win98_maximize.mp3');
 var restoreUpWindow = new Audio('./assets/sound effects/Win98_restore_up.mp3');
 var restoreDownWindow = new Audio('./assets/sound effects/Win98_restore_down.mp3');
 
+// isMobile() 
+// Returns if a user is on a mobile device
+function isMobile() {
+    return/Android|iPhone/i.test(navigator.userAgent);
+}
+
+function adjustForMobile() {
+    menuRight.style.display = 'none';
+    portfolioWindow.style.marginTop = '0';
+    portfolioWindow.style.marginLeft = '0';
+    portfolioWindow.style.width = '99vw';
+    portfolioWindow.style.height = '96vh';
+    launchTerminal.style.width = '99vw';
+    launchTerminal.style.paddingLeft = '1vw';
+    launchInput.style.width = '30vw';
+    windowContent.style.width = '100vw';
+    windowContent.style.display = 'block';
+    maximizeButton.style.display = 'none';
+    profileContainer.style.display = 'block';
+    aboutMeContainer.style.display = 'block';
+    aboutMeContainer.style.width = '80vw';
+    contactContainer.style.display = 'block';
+    contactLinks.style.display = 'block';
+    contactLinks.style.width = '80vw';
+    contactLinks.style.height = '115px';
+    aboutMePic.style.width = '80vw';
+    aboutMeIntroduction.style.display = 'block';
+    profilePic.style.marginTop = '30px';
+}
+
 // onLoad()
-// When site is loaded, focus the terminal text input
+// When site is loaded, focus the terminal text input and accomodate for phone users
 window.onload = () => {
+    if (isMobile()) {
+        adjustForMobile();
+    }
     launchInput.focus();
+    
 };
  
 // eventListener()
@@ -183,6 +226,9 @@ function toggleOpenFromStart() {
 // showPortfolio()
 // Display the portfolio window from hidden
 function showPortfolio() {
+    if (isMobile()) {
+        adjustForMobile();
+    }
     portfolioClose = false;
     portfolioWindow.style.display = 'flex';     
     websiteButton.style.backgroundColor = '#818181';   // Set button to toggled visually
