@@ -100,6 +100,7 @@ function adjustForMobile() {
     aboutMePic.style.width = '80vw';
     aboutMeIntroduction.style.display = 'block';
     profilePic.style.marginTop = '30px';
+    startMenu.style.bottom = 'calc(6% + 4px)';
 }
 
 // onLoad()
